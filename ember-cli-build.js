@@ -4,9 +4,13 @@ const EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
 
 module.exports = function(defaults) {
   let app = new EmberAddon(defaults, {
-    // Add options here
-  });
 
+  });
+  app.import('node_modules/rematrix/dist/rematrix.es.js', {
+	using: [
+      { transformation: 'es6', as: 'rematrix' }
+	]
+  });
   /*
     This build file specifies the options for the dummy test app of this
     addon, located in `/tests/dummy`
