@@ -6,11 +6,6 @@ module.exports = function(defaults) {
   let app = new EmberAddon(defaults, {
 
   });
-  app.import('node_modules/rematrix/dist/rematrix.es.js', {
-	using: [
-      { transformation: 'es6', as: 'rematrix' }
-	]
-  });
   /*
     This build file specifies the options for the dummy test app of this
     addon, located in `/tests/dummy`
